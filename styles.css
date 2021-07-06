@@ -49,20 +49,6 @@ input, button, select, textarea, optgroup, option {
     scroll-behavior: smooth;
   }
  
-  /* Adjusting all the elements in order to make the anchors scroll to where we want */
-  /* See here for details: https://css-tricks.com/hash-tag-links-padding/ */
-  .anchor{
-    top: -88.88px;
-    /* padding-bottom: 88.88px; */
-    display: block;
-    position: relative;
-    z-index: -1;
-  }
-  #introInfoAnchor{
-    margin-top: -310px;
-    padding-bottom: 310px;
-  }
-
   hr{
     width: 30%;
     margin: 0 auto;
@@ -180,13 +166,13 @@ input, button, select, textarea, optgroup, option {
 
   /* Intro Section */
 section#intro{
-    margin-top: 80px;
+    margin-top: 58px;
     padding: 50px 20% 50px 10%;
     display: flex;
     height: 100vh;
   
     /* Add background picture! */
-    background: url(./lomdei_pic_1.JPG) no-repeat center center fixed;
+    background: url(./pics/lomdei_pic_4.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -200,6 +186,8 @@ section#intro{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 3%;
+    background-color: rgba(248, 249, 250,0.5);
   }
   @media only screen and (max-width: 700px){
       #title{
@@ -310,6 +298,11 @@ section#intro{
   display: none;
 }
 /* Info Section */
+span#infoAnchor{
+    position: absolute;
+    left: 0;
+    top: -65px;
+}
 div.infoContainer{
     display: flex;
     flex-direction: row;
@@ -323,6 +316,7 @@ div.info{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 2em;
 }
 div.infoBox{
     margin-bottom: 2.5%;
