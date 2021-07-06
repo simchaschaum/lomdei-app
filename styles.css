@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,900&display=swap');
 
 html, body, form, fieldset, table, tr, td, img {
   margin: 0;
@@ -39,7 +40,7 @@ input, button, select, textarea, optgroup, option {
   }
   body{
     background: rgb(102,191,255);
-    background: linear-gradient(90deg, rgba(219,243,247,0.33657212885154064) 0%, var(--clr-dark) 100%);
+    background: linear-gradient(90deg, rgba(219,243,247,0.33657212885154064) 0%, rgba(50,76,93,0.5) 100%);
     position: absolute;
     background-attachment: fixed;
   }
@@ -179,11 +180,12 @@ input, button, select, textarea, optgroup, option {
 
   /* Intro Section */
 section#intro{
-    margin-top: 0;
+    margin-top: 80px;
     padding: 50px 20% 50px 10%;
     display: flex;
     height: 100vh;
   
+    /* Add background picture! */
     background: url(./lomdei_pic_1.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -191,12 +193,18 @@ section#intro{
     background-size: cover;
 
     text-align: left;
+;
   }
   #title{
     width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  @media only screen and (max-width: 700px){
+      #title{
+          width: 90%
+      }
   }
   #title img#logo{
     min-width: 300px;
@@ -302,16 +310,16 @@ section#intro{
   display: none;
 }
 /* Info Section */
-div#infoContainer{
+div.infoContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 
     width: 90%;
     margin: 0 auto;
 }
 div.info{
-    width: 48%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -320,8 +328,8 @@ div.infoBox{
     margin-bottom: 2.5%;
     width: 100% !important;
 }
-@media only screen and (max-width: 700px) {
-    div#infoContainer   {
+@media only screen and (max-width: 900px) {
+    div.infoContainer   {
         flex-direction: column;
         align-items: center;
     }
@@ -331,17 +339,40 @@ div.infoBox{
 }
 
 div.infoBox>div{
-    width: 100%
-}
+    width: 100%;
+    font-size: 1.5em;
 
+}
+div.infoBox>div>button{
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+div.infoBox>div>button:hover{
+    background-color: var(--clr-dark);
+    color: var(--clr-white)
+}
 button.infoTitle{
     border: none;
     width: 100%;
 }
 div.collapse{
-    width: 100%
+    width: 100%;
 }
-
+.bigbold{
+    font-weight: 900;
+    font-size: 1.75em;
+    transform: translateY(-3px);
+    margin-right: 5px;
+}
+div.infoBox>div>button:hover .bigbold{
+    color: var(--clr-white)
+}
+.card{
+    font-size: .75em;
+}
 /* Examples Section */
 section#examples{
   text-align: center;
@@ -393,73 +424,6 @@ section#examples{
 }
 .exampleDiv button{
   margin-bottom: 5px;
-}
-/* Services Section */
-section#services{
-  text-align: center;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-}
-#services .text{
-  text-align: left;
-}
-#services p{
-  text-align: justify;
-}
-.constrainingContainer{
-  display: inline-block;
-  overflow: hidden;
-  width: 450px;
-  height: 300px;
-  margin-left: 5%;
-}
-#services img{
-  width: 450px;
-  height: 300px;
-  object-fit: cover;
-}
-#services .anchor{
-  padding: 0px;
-}
-#services .buttons{
-  height: 50px;
-}
-.buttons button{
-  margin-top: 0;
-  max-width: 300px;
-}
-@media only screen and (max-width:900px){
-  #services button{
-    width: 250px;
-    margin: 10px
-  }
-  #services .buttons{
-    margin-top: 75px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  #services img{
-    max-height: 70%;
-  }
-}
-/* Government Grants Section */
-section#gvtGrants {
-  text-align: center;
-  margin-top: 100px;
-}
-#gvtGrants img{
-  max-height: 100%;
-}
-@media only screen and (max-width:900px){
-  #gvtGrants img{
-    max-height: 70%;
-  }
-}
-#gvtGrants .anchor{
-  padding: 0;
 }
 
 /* Team Section */
