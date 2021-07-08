@@ -87,6 +87,11 @@ input, button, select, textarea, optgroup, option {
   a.nav-link:hover {
     background-color: var(--clr-light);
   }
+  a.disabled{
+    background-color: var(--clr-light);
+    pointer-events: none;
+  }
+ 
   
   /* Sections*/
   section {
@@ -96,7 +101,7 @@ input, button, select, textarea, optgroup, option {
   }
   @media only screen and (max-width: 900px) {
     section {
-      padding: 20px 2.5%;
+      padding: 2.5%;
       margin-bottom: 0;
     }
   }
@@ -179,22 +184,21 @@ section#intro{
     background-size: cover;
 
     text-align: left;
-;
   }
-  #title{
+  .title{
     width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 3%;
-    background-color: rgba(248, 249, 250,0.5);
+    background-color: rgba(248, 249, 250,0.70);
   }
-  @media only screen and (max-width: 700px){
-      #title{
-          width: 90%
+  @media only screen and (max-width: 1200px){
+      .title{
+          width: 100%
       }
   }
-  #title img#logo{
+  .title img#logo{
     min-width: 300px;
     max-width: 400px;
     object-fit: fill;
@@ -219,13 +223,7 @@ section#intro{
     flex-direction: row;
     flex: 1;
   }
-  @media only screen and (max-width: 900px) {
-    .text-right,
-    .text-left{
-      flex-direction: column;
-      justify-content: space-around;
-    }
-  }
+
   .picture{
     padding-top: 5%;
     display: flex;
@@ -242,22 +240,7 @@ section#intro{
     flex-direction: column;
     justify-content: space-around;
   }
-  @media only screen and (max-width: 900px){
-    .picture{
-      padding-top: 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .text{
-      padding: 0;
-      /* margin-top: 20px; */
-      margin: 0 5% 10px 5%;
-      justify-content: center;
-      min-height: 200px;
-    }
-  }
+
   .picture img{
     width: 450px;
     height: 300px;
@@ -280,7 +263,7 @@ section#intro{
       display: flex;
   }
   @media only screen and (max-width: 900px){
-    .learnMoreBtn:hover{
+    .learnMoreBtn{
       padding: 2% 5%;
     }
   }
@@ -298,11 +281,6 @@ section#intro{
   display: none;
 }
 /* Info Section */
-span#infoAnchor{
-    position: absolute;
-    left: 0;
-    top: -65px;
-}
 div.infoContainer{
     display: flex;
     flex-direction: row;
@@ -552,7 +530,7 @@ section#team{
 }
 
 /* For Google form */
-iframe{
+iframe.form{
   height: 800px;
   margin: 25px;
 }
@@ -576,3 +554,73 @@ iframe{
   margin: 0
 }
 
+/* ABOUT PAGE */
+.anchor{
+    position: absolute;
+    left: 0;
+    top: -65px;
+}
+section#aboutLomdei{
+    margin-top: 58px;
+    padding: 50px 20% 50px 10%;
+    min-height: 100vh;
+  
+    /* Add background picture! */
+    background: url(./pics/lomdei_pic_8.JPG) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    text-align: left;
+}
+  @media only screen and (max-width: 700px){
+    section#aboutLomdei{
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+}
+section#aboutLomdei .title>div{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+section#promoVideos{
+    display: flex;
+    justify-content: space-around;
+}
+@media only screen and (max-width:900px){
+    section#promoVideos{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+iframe.video{
+    height: 80vh;
+    width: 48%;
+    box-shadow: 0 0 5px var(--clr-dark);
+}
+@media only screen and (max-width:900px){
+    iframe.video{
+        width: 95%;
+        margin-bottom: 5%;
+    }
+}
+
+/* Videos page */
+section#tVideosIntro{
+    margin-top: 58px;
+    padding: 50px 20% 50px 10%;
+    min-height: 100vh;
+    border: red 1px solid;
+
+    background: url(./pics/featured\ content\ 2\ pic.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    text-align: left;
+}
