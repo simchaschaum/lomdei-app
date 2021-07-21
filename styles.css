@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,900&display=swap');
 
 html, body, form, fieldset, table, tr, td, img {
@@ -43,6 +43,7 @@ input, button, select, textarea, optgroup, option {
     background: linear-gradient(90deg, rgba(219,243,247,0.33657212885154064) 0%, rgba(50,76,93,0.5) 100%);
     position: absolute;
     background-attachment: fixed;
+    width: 100%;
   }
 
   html{
@@ -454,90 +455,12 @@ section#team{
   text-align: justify;
 }
 
-/* Contact us */
-#contactUs{
-  /* background-color: var(--clr-light); */
-  color: var(--clr-dark);
-  text-align: center;
-  font-size: 1.15em;
-  margin-top: 78px;
-}
-#contactUs form{
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 0 auto;
-}
-@media only screen and (max-width:1000px){
-  #contactUs form{
-    width: 75%
-  }
-}
-@media only screen and (max-width:700px){
-  #contactUs form{
-    width: 90%
-  }
-  .formGrp label{
-    display: none;
-  }
-}
-#contactUs input,
-#contactus textarea{
-  margin-bottom: 10px;
-  border: none;
-  padding: .5em;
-  box-shadow: 0 0 5px var(--clr-dark);
-}
-#contactUs input[type="text"]{
-  height: 2em;
-}
-#contactUs input[type="submit"]{
-  border: none;
-  border-radius: 30px;
-  color: var(--clr-white);
-  background-color: var(--clr-dark);
-  max-width: 200px;
-  min-height: 50px;
-  padding: 5px 15px;
-  /* font-size: 25px; */
-  transition: background-color 0.3s;
-}
-#contactUs input[type="submit"]:hover{
-  background-color: var(--clr-btnHov);
-}
-
-.formGrp{
-  display: flex;
-  justify-content: flex-start;
-}
-.formGrp label,
-.formGrp div{
-  flex: 1;
-  text-align: right;
-  margin-right: 5%;
-}
-.formGrp input,
-.formGrp textarea{
-  flex: 3
-}
-.formGrp input[type=submit]{
-  width: 25%
-}
-#contactUs img{
-  width: 25px;
-  height: 25px;
-  margin-bottom: 0;
-}
-
-/* For Google form */
-iframe.form{
-  height: 800px;
-  margin: 25px;
-}
 
 /* Footer */
-#pageContainer{
+.pageContainer{
   padding-bottom: 2.5rem;
+  min-height: 90vh;
+  width: 100%;
 }
 
 #footer{
@@ -597,6 +520,14 @@ section#promoVideos{
         align-items: center;
     }
 }
+.link{
+  color: var(--clr-dark);
+  text-decoration: underline;
+}
+.link:hover{
+  color: var(--clr-dark);
+  text-decoration: none;
+}
 iframe.video{
     height: 80vh;
     width: 48%;
@@ -610,17 +541,144 @@ iframe.video{
 }
 
 /* Videos page */
-section#tVideosIntro{
-    margin-top: 58px;
-    padding: 50px 20% 50px 10%;
-    min-height: 100vh;
-    border: red 1px solid;
+/* HeaderSection is used by the headers for Videos, Schools */
+.headerSection{
+  margin-top: 61px;
+  width: 100%;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-light);
+}
+.list-group{
+  width: 30%;
+  float: right;
+  position: sticky;
+  top: 62px;
+  margin-right: 2.5%;
+}
+.showIt{
+  display: none !important;
+}
+#contentsDropup{
+  display: none;
+  position: fixed;
+  z-index: 99;
+  bottom: 2.5%;
+  right: 2.5%;
+  box-shadow: 0 0 5px var(--clr-dark);
+  border-radius: .25rem;
+}
+#dropupButton{
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+}
+#dropupButton:hover{
+  background-color: var(--clr-btnHov);
+}
 
-    background: url(./pics/featured\ content\ 2\ pic.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
-    text-align: left;
+@media only screen and (max-width: 700px){
+  .list-group{
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 0px;
+  }
+  hr.dropdown-divider{
+    display: none;
+  }
+  .showIt{
+    display: block !important;
+  }
+}
+.list-group-item{
+  background-color: var(--clr-dark);
+  color: var(--clr-white)
+}
+span.videoAnchor{
+  margin-top: -78px;
+  padding-bottom: 78px;
+}
+section#tVideos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.videoContainer{
+  margin-bottom: 5%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+iframe.tVideo{
+  width: 100%;
+  height: 500px;
+}
+@media only screen and (max-width:700px){
+  .videoContainer{
+    width: 95%;
+  }
+  iframe.tVideo{
+    height: 250px;
+  }
+}
+
+/* Schools Section */
+section#schools{
+  width: 90%;
+  min-height: 1000px;
+  margin: 0 auto;
+}
+div#schoolsDiv{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+div#schoolsDiv div{
+  margin-bottom: 5%;
+  width:300px;
+}
+div#schoolsDiv li{
+  list-style: none;
+}
+.country{
+  font-weight: 900;
+}
+/* Grants Section */
+section#grants{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+section#grants h3{
+  margin:5% 0;
+}
+/* Contact Us Page */
+section#contactUs{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#contactUs div{
+  width: 90%;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+div#contactPeople{
+  display: flex;
+  justify-content: space-between;
+}
+div#contactPeople>div{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
 }
