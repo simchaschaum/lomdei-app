@@ -172,7 +172,7 @@ input, button, select, textarea, optgroup, option {
 
   /* Intro Section */
 section#intro{
-    margin-top: 58px;
+    margin-top: 29px;
     padding: 50px 20% 50px 10%;
     display: flex;
     height: 100vh;
@@ -187,7 +187,7 @@ section#intro{
     text-align: left;
   }
   .title{
-    width: 55%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -211,6 +211,20 @@ section#intro{
     #intro button{
       font-size: 18px;
     }
+  }
+  div#counters{
+    background-color: var(--clr-dark);
+    display: flex;
+    justify-content: space-between;
+  }
+  div#counters div{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div#counters *{
+    color: var(--clr-white)
   }
 
   /* Subsequent Sections */
