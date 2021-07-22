@@ -186,19 +186,39 @@ section#intro{
 
     text-align: left;
   }
+  @media only screen and (max-width:1050px){
+    section#intro{
+      padding: 50px 10% 50px 5%
+    }
+  }
   .title{
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding: 3%;
     background-color: rgba(248, 249, 250,0.70);
   }
-  @media only screen and (max-width: 1200px){
+  @media only screen and (max-width:1000px){
       .title{
           width: 100%
       }
+      .title h1{
+        font-size: 34px
+      }
+      .title h3{
+        font-size: 30px
+      }
   }
+  @media only screen and (max-width:380px){
+    .title h1{
+      font-size: 22px
+    }
+    .title h3{
+      font-size: 18px
+    }
+  }
+
   .title img#logo{
     min-width: 300px;
     max-width: 400px;
@@ -225,6 +245,27 @@ section#intro{
   }
   div#counters *{
     color: var(--clr-white)
+  }
+  @media only screen and (max-width:550px){
+    div#counters{
+      margin-bottom: 5%;
+    }
+    div#counters h3{
+      font-size: 22px;
+    }
+    div#counters h5{
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  @media only screen and (max-width:290px){
+    div#counters h3{
+      font-size: 18px;
+    }
+    div#counters h5{
+      font-size: 10px;
+      margin: 0;
+    }
   }
 
   /* Subsequent Sections */
