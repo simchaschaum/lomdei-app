@@ -283,6 +283,11 @@ section#intro{
       margin: 0;
     }
   }
+  #infoAnchor{
+    position: absolute;
+    left: 0;
+    top: -85;
+  }
 
   /* Subsequent Sections */
   .text-right{
@@ -353,6 +358,10 @@ section#intro{
   display: none;
 }
 /* Info Section */
+#info h4{
+  width: 90%;
+  margin: 0 auto;
+}
 div.infoContainer{
     display: flex;
     flex-direction: row;
@@ -476,8 +485,8 @@ section#team{
   text-align: center;
 }
 #team img{
-  max-width: 300px;
-  height: 330px;
+  max-width: 200px;
+  height: 260px;
   object-fit: cover;
 }
 #team .anchor{
@@ -513,6 +522,16 @@ section#team{
 }
 .teamCard:hover .fullBio{
   opacity: 1.0;
+}
+@media only screen and (max-width: 700px){
+  #teamContainer{
+    flex-direction: column;
+    align-items: center;
+  }
+  .teamCard{
+    max-width: 90%;
+    width: 90%;
+  }
 }
 @media only screen and (max-width:800px){
   .teamCard{
