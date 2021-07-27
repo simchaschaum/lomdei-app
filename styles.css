@@ -75,14 +75,19 @@ input, button, select, textarea, optgroup, option {
     justify-content: space-between;
   }
   .navbar-brand > img {
-    width: 175px;
+    width: 315px;
+  }
+  @media only screen and (max-width:1050px){
+    .navbar-brand > img {
+      width: 175px;
+    }
   }
   .bg-light {
     background-color: var(--clr-white) !important;
   }
   a.nav-link {
     color: var(--clr-dark) !important;
-    font-size: 15px;
+    font-size: 18px;
     transition: background-color 0.3s;
   }
   a.nav-link:hover {
@@ -92,7 +97,13 @@ input, button, select, textarea, optgroup, option {
     background-color: var(--clr-light);
     pointer-events: none;
   }
- 
+  #login{
+    background-color: var(--clr-dark);
+    color: white !important
+  }
+  #login:hover{
+    background-color: var(--clr-btnHov);
+  }
   
   /* Sections*/
   section {
@@ -178,7 +189,7 @@ section#intro{
     height: 100vh;
   
     /* Add background picture! */
-    background: url(./pics/lomdei_pic_4.JPG) no-repeat center center fixed;
+    background: url(./pics/lomdei_pic_1.JPG) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -188,11 +199,12 @@ section#intro{
   }
   @media only screen and (max-width:1050px){
     section#intro{
-      padding: 50px 10% 50px 5%
+      padding: 0 10% 50px 5%;
     }
   }
   .title{
-    width: 60%;
+    margin-top: 3%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -217,6 +229,10 @@ section#intro{
     .title h3{
       font-size: 18px
     }
+  }
+  .title #introButtons{
+    display: flex;
+    justify-content: space-around;
   }
 
   .title img#logo{
